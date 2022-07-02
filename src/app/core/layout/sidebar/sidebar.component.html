@@ -1,0 +1,23 @@
+<nav class="side-bar" [ngClass]="isExpandedSidebar ? 'expanded' : ''">
+  <div class="header">
+    <label class="title">Menu</label>
+    <a class="side-bar-icon" (click)="expandSidebar()">
+      <app-double-arrow-right
+        [rotate]="isExpandedSidebar ? true : false"
+      ></app-double-arrow-right>
+    </a>
+  </div>
+  <ul *ngFor="let item of sideMenuItems">
+    <a class="item" [routerLink]="item.route" (click)="getCurrentRoute()">
+      <ng-container [ngSwitch]="item.label">
+        <app-info-icon *ngSwitchCase="'Sobre mim'"></app-info-icon>
+        <app-curriculum-vitae-icon
+          *ngSwitchCase="'CV'"
+        ></app-curriculum-vitae-icon>
+        <p class="item-title">{{ item.label }}</p>
+      </ng-container>
+    </a>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

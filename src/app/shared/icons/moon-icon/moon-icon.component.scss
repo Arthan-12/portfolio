@@ -1,0 +1,10 @@
+#moon-icon {
+  fill: var(--text-secondary);
+  width: 22px;
+  height: 22px;
+}
+
+#moon-icon:hover {
+  background-color: rgba($color: #ffff, $alpha: 0.3);
+  box-shadow: 0 0 1em #fff;
+}

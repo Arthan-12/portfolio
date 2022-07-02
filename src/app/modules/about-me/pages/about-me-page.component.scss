@@ -1,0 +1,14 @@
+.container {
+  margin: 3rem 11rem;
+  border: 10px solid;
+  border-radius: 20px;
+
+  .intro {
+    font-size: 20px;
+    font-family: "Opens Sans", sans-serif;
+  }
+  ::first-letter {
+    color: var(--blue-primary);
+    font-size: 26px;
+  }
+}
