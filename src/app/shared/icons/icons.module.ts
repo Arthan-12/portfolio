@@ -5,6 +5,7 @@ import { MoonIconComponent } from './moon-icon/moon-icon.component';
 import { SunIconComponent } from './sun-icon/sun-icon.component';
 import { InfoIconComponent } from './info-icon/info-icon.component';
 import { CurriculumVitaeIconComponent } from './curriculum-vitae-icon/curriculum-vitae-icon.component';
+import { CircleUserIconComponent } from './circle-user-icon/circle-user-icon.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CurriculumVitaeIconComponent } from './curriculum-vitae-icon/curriculum
     SunIconComponent,
     InfoIconComponent,
     CurriculumVitaeIconComponent,
+    CircleUserIconComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -21,6 +23,7 @@ import { CurriculumVitaeIconComponent } from './curriculum-vitae-icon/curriculum
     SunIconComponent,
     InfoIconComponent,
     CurriculumVitaeIconComponent,
+    CircleUserIconComponent,
   ],
 })
 export class IconsModule {}
