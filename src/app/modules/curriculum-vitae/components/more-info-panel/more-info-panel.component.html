@@ -1,1 +1,9 @@
-<p>more-info-panel works!</p>
+<div>
+  <p *ngIf="selectedProject === 'Timesheet'">O projeto Timesheet...</p>
+  <p *ngIf="selectedProject === 'Acompanhamento Operacional'">
+    O projeto Acompanhamento Operacional...
+  </p>
+  <p *ngIf="selectedProject === 'Banco de Horas'">
+    O projeto Banco de Horas...
+  </p>
+</div>

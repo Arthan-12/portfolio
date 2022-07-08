@@ -38,11 +38,16 @@ export class CurriculumVitaePageComponent implements OnInit {
   ngOnInit(): void {}
 
   setActivePanel(index: number) {
-    this.activeIndex = index;
-    console.log(this.activeIndex);
+    if (index !== this.activeIndex) {
+      this.activeIndex = index;
+      this.selectedProject = '';
+    } else {
+      return;
+    }
   }
 
   selectProject(project: string) {
     this.selectedProject = project;
+    console.log(this.selectedProject);
   }
 }
