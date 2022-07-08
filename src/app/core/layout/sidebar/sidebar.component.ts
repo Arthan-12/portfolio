@@ -41,6 +41,7 @@ export class SidebarComponent implements OnInit {
   }
 
   expandSidebar() {
+    debugger;
     this.isExpandedSidebar = !this.isExpandedSidebar;
   }
 }

@@ -4,6 +4,67 @@
       <div class="user-icon">
         <app-circle-user-icon></app-circle-user-icon>
       </div>
+      <div class="info social">
+        <p>Victor Souza</p>
+        <p>28 anos</p>
+        <p>Residente de São Paulo - SP</p>
+        <p>Desenvolvedor Front End</p>
+      </div>
+      <div class="info contact">
+        <a
+          href="{{ githubURL }}"
+          target="_blank"
+          title="Conheça meus repósitórios (:"
+        >
+          <app-github-icon></app-github-icon>
+        </a>
+        <a
+          href="{{ linkedinURL }}"
+          target="_blank"
+          title="Visite meu LinkedIn (:"
+        >
+          <app-linkedin-icon></app-linkedin-icon>
+        </a>
+        <app-whatsapp-icon></app-whatsapp-icon>
+      </div>
+    </div>
+    <div class="panel">
+      <div
+        *ngFor="let panel of panels; let i = index"
+        class="info {{ panel.panelClass }}"
+        (click)="setActivePanel(i)"
+        [ngClass]="activeIndex === i ? 'active' : 'shrink'"
+      >
+        <div *ngIf="panel.panelTitle === 'Experiência Profissional'">
+          <p class="title">{{ panel.panelTitle }}</p>
+          <div [ngStyle]="{ visibility: activeIndex !== i ? 'hidden' : '' }">
+            <p>
+              {{ panel.panelInfo }}
+              <a class="link" href="{{ iterisURL }}" target="_blank"
+                >Iteris Consultoria</a
+              >
+            </p>
+            <p class="">Cases de sucesso</p>
+            <ul>
+              <li
+                *ngFor="let project of projectList"
+                (click)="selectProject(project)"
+              >
+                {{ project }}
+              </li>
+            </ul>
+            <app-more-info-panel
+              *ngIf="selectedProject !== ''"
+            ></app-more-info-panel>
+          </div>
+        </div>
+        <div *ngIf="panel.panelTitle === 'Soft Skills'">
+          <p class="title">{{ panel.panelTitle }}</p>
+        </div>
+        <div *ngIf="panel.panelTitle === 'Hard Skills'">
+          <p class="title">{{ panel.panelTitle }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
