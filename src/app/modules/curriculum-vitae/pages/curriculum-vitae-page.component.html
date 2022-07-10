@@ -60,6 +60,19 @@
         </div>
         <div *ngIf="panel.panelTitle === 'Soft Skills'">
           <p class="title">{{ panel.panelTitle }}</p>
+          <div class="cards-container">
+            <div
+              class="cards"
+              *ngFor="let card of softSkillsCardList"
+              [ngClass]="activeIndex === i ? 'active' : 'shrink'"
+            >
+              <app-soft-skills-card
+                (click)="selectCard(card)"
+                [selectedCard]="selectedCard"
+                [cardTitle]="card"
+              ></app-soft-skills-card>
+            </div>
+          </div>
         </div>
         <div *ngIf="panel.panelTitle === 'Hard Skills'">
           <p class="title">{{ panel.panelTitle }}</p>

@@ -9,6 +9,8 @@ import { CircleUserIconComponent } from './circle-user-icon/circle-user-icon.com
 import { GithubIconComponent } from './github-icon/github-icon.component';
 import { WhatsappIconComponent } from './whatsapp-icon/whatsapp-icon.component';
 import { LinkedinIconComponent } from './linkedin-icon/linkedin-icon.component';
+import { HandShakeIconComponent } from './hand-shake-icon/hand-shake-icon.component';
+import { CommentsIconComponent } from './comments-icon/comments-icon.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LinkedinIconComponent } from './linkedin-icon/linkedin-icon.component';
     GithubIconComponent,
     WhatsappIconComponent,
     LinkedinIconComponent,
+    HandShakeIconComponent,
+    CommentsIconComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -33,6 +37,8 @@ import { LinkedinIconComponent } from './linkedin-icon/linkedin-icon.component';
     GithubIconComponent,
     WhatsappIconComponent,
     LinkedinIconComponent,
+    HandShakeIconComponent,
+    CommentsIconComponent,
   ],
 })
 export class IconsModule {}

@@ -30,8 +30,17 @@ export class CurriculumVitaePageComponent implements OnInit {
   ];
 
   projectList = ['Timesheet', 'Acompanhamento Operacional', 'Banco de Horas'];
+  softSkillsCardList = [
+    'Comunicação',
+    'Senso de Dono',
+    'Curiosidade',
+    'Espírito de Equipe',
+    'Autonomia',
+    'Comprometimento',
+  ];
   activeIndex = 0;
   selectedProject = '';
+  selectedCard = '';
 
   constructor() {}
 
@@ -41,6 +50,7 @@ export class CurriculumVitaePageComponent implements OnInit {
     if (index !== this.activeIndex) {
       this.activeIndex = index;
       this.selectedProject = '';
+      this.selectedCard = '';
     } else {
       return;
     }
@@ -48,6 +58,9 @@ export class CurriculumVitaePageComponent implements OnInit {
 
   selectProject(project: string) {
     this.selectedProject = project;
-    console.log(this.selectedProject);
+  }
+
+  selectCard(card: string) {
+    this.selectedCard = card;
   }
 }

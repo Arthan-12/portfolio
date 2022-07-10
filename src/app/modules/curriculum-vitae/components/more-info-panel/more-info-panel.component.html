@@ -1,9 +1,37 @@
 <div>
-  <p *ngIf="selectedProject === 'Timesheet'">O projeto Timesheet...</p>
-  <p *ngIf="selectedProject === 'Acompanhamento Operacional'">
-    O projeto Acompanhamento Operacional...
-  </p>
-  <p *ngIf="selectedProject === 'Banco de Horas'">
-    O projeto Banco de Horas...
-  </p>
+  <div *ngIf="selectedProject === 'Timesheet'">
+    <p>Projeto: Timesheet</p>
+    <p>Duração do projeto: 1 ano</p>
+    <p>Tempo de atuação do projeto: 8 meses</p>
+    <p>
+      Objetivo: Criar um sistema de registro de ponto 100% digital e
+      automatizado, que contemplasse todas as regras para os diferentes regimes
+      de contratação (CLT, PJ, Estágio, etc) em relação ao registro de ponto e
+      apontamento de atividades, no modelo de trabalho home office
+    </p>
+  </div>
+  <div *ngIf="selectedProject === 'Acompanhamento Operacional'">
+    <p>Projeto: Acompanhamento Operacional</p>
+    <p>Duração do projeto: 5 meses</p>
+    <p>Tempo de atuação do projeto: 5 meses</p>
+    <p>
+      Objetivo: Criar um sistema voltado à gestão de colaboradores, onde o
+      gerente responsável de cada área/equipe possa visualizar todos os
+      apontamentos de atividades de seus liderados, em um determinado período ou
+      projeto, visando a garantia de metas e prazos, tanto individual quanto
+      coletivo.
+    </p>
+  </div>
+  <div *ngIf="selectedProject === 'Banco de Horas'">
+    <p>Projeto: Banco de Horas</p>
+    <p>Duração do projeto: 3 meses</p>
+    <p>Tempo de atuação do projeto: 3 meses</p>
+    <p>
+      Objetivo: Criar um sistema voltado à gestão e ao RH, que traga de forma
+      clara e intuitiva toda informação, assim como os cálculos, do banco de
+      horas de todos colaboradores, sendo possível filtrar por equipes, períodos
+      ou regime de contratação, visando agilizar e automatizar a aprovação e
+      pagamento das horas dos colaboradores selecionados.
+    </p>
+  </div>
 </div>

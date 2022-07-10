@@ -1,0 +1,9 @@
+<div class="card">
+  <p class="title">{{ cardTitle }}</p>
+  <div class="icon">
+    <app-hand-shake-icon
+      *ngIf="cardTitle === 'Comprometimento'"
+    ></app-hand-shake-icon>
+    <app-comments-icon *ngIf="cardTitle === 'Comunicação'"></app-comments-icon>
+  </div>
+</div>
