@@ -1,5 +1,6 @@
 .container {
   margin: 3rem 11rem;
+  font-family: "Opens Sans", sans-serif;
 
   .content {
     display: flex;
@@ -7,7 +8,7 @@
     width: 1000px;
     border-radius: 20px;
     border: 2px solid;
-    background-color: var(--text-primary);
+    background-color: var(--blue-gray);
 
     .side-panel {
       width: 30%;
@@ -53,6 +54,7 @@
 
         .title {
           margin: 0 0 0 8px;
+          padding-top: 14px;
         }
 
         .link {
@@ -67,6 +69,7 @@
           background-color: var(--blue-navy);
         }
         &.shrink {
+          cursor: pointer;
           height: 10%;
           transition: 1000ms linear;
           border-radius: 0px 18px 18px 0;
@@ -77,10 +80,20 @@
           display: flex;
           flex-wrap: wrap;
           margin-left: 24px;
+
+          &.shrink {
+            visibility: hidden;
+          }
         }
         .cards {
           flex: 1 0 33%;
           margin-top: 24px;
+        }
+
+        .hard-skills-container {
+          &.active {
+            display: flex;
+          }
           &.shrink {
             display: none;
           }

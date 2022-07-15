@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .hard-skills-list {
+    min-width: 124px;
+    height: 120px;
+
+    .skill {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .see-more {
+        font-size: 22px;
+        margin-left: 4px;
+      }
+    }
+
+    .expanded {
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}

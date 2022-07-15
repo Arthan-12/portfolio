@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-curriculum-vitae-page',
@@ -48,6 +48,11 @@ export class CurriculumVitaePageComponent implements OnInit {
 
   setActivePanel(index: number) {
     if (index !== this.activeIndex) {
+      // if (index === 1) {
+      //   setTimeout(() => {
+      //     (document.getElementById('cards').style.visibility = 'visible'), 2000;
+      //   });
+      // }
       this.activeIndex = index;
       this.selectedProject = '';
       this.selectedCard = '';

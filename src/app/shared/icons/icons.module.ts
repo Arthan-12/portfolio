@@ -11,6 +11,12 @@ import { WhatsappIconComponent } from './whatsapp-icon/whatsapp-icon.component';
 import { LinkedinIconComponent } from './linkedin-icon/linkedin-icon.component';
 import { HandShakeIconComponent } from './hand-shake-icon/hand-shake-icon.component';
 import { CommentsIconComponent } from './comments-icon/comments-icon.component';
+import { CrownIconComponent } from './crown-icon/crown-icon.component';
+import { PuzzleIconComponent } from './puzzle-icon/puzzle-icon.component';
+import { TeamIconComponent } from './team-icon/team-icon.component';
+import { HandFistIconComponent } from './hand-fist-icon/hand-fist-icon.component';
+import { ReactIconComponent } from './react-icon/react-icon.component';
+import { AngularIconComponent } from './angular-icon/angular-icon.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,12 @@ import { CommentsIconComponent } from './comments-icon/comments-icon.component';
     LinkedinIconComponent,
     HandShakeIconComponent,
     CommentsIconComponent,
+    CrownIconComponent,
+    PuzzleIconComponent,
+    TeamIconComponent,
+    HandFistIconComponent,
+    ReactIconComponent,
+    AngularIconComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -39,6 +51,12 @@ import { CommentsIconComponent } from './comments-icon/comments-icon.component';
     LinkedinIconComponent,
     HandShakeIconComponent,
     CommentsIconComponent,
+    CrownIconComponent,
+    PuzzleIconComponent,
+    TeamIconComponent,
+    HandFistIconComponent,
+    ReactIconComponent,
+    AngularIconComponent,
   ],
 })
 export class IconsModule {}

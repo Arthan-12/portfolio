@@ -1,0 +1,64 @@
+<div class="container">
+  <ul
+    *ngFor="let item of hardSkillsList; let i = index"
+    class="hard-skills-list"
+  >
+    <label class="skill" (click)="showList(i)">
+      <span>{{ item }}</span
+      ><span class="see-more" *ngIf="!expandedInfo[i]; else shrink">+</span>
+
+      <ng-template #shrink>
+        <label class="see-more">-</label>
+      </ng-template>
+    </label>
+
+    <div *ngIf="item === hardSkillsList[0]">
+      <li
+        *ngFor="let framework of frameworkList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ framework }}
+      </li>
+    </div>
+    <div *ngIf="item === hardSkillsList[1]">
+      <li
+        *ngFor="let css of cssList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ css }}
+      </li>
+    </div>
+    <div *ngIf="item === hardSkillsList[2]">
+      <li
+        *ngFor="let pattern of patternList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ pattern }}
+      </li>
+    </div>
+    <div *ngIf="item === hardSkillsList[3]">
+      <li
+        *ngFor="let unitTest of unitTestList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ unitTest }}
+      </li>
+    </div>
+    <div *ngIf="item === hardSkillsList[4]">
+      <li
+        *ngFor="let git of gitList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ git }}
+      </li>
+    </div>
+    <div *ngIf="item === hardSkillsList[5]">
+      <li
+        *ngFor="let node of nodeList"
+        [ngClass]="expandedInfo[i] ? 'expanded' : 'hidden'"
+      >
+        {{ node }}
+      </li>
+    </div>
+  </ul>
+</div>
